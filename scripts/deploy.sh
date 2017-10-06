@@ -4,9 +4,10 @@ if [[ -z $ADMIN_TOKEN ]]; then
 fi
 
 now \
-  -a server.learnnextjs.com \
+  -d
+  -a okgrow-coursebook-server.now.sh \
   -e GITHUB_CLIENT_ID=@learnnextjs-gh-client-id \
   -e GITHUB_CLIENT_SECRET=@learnnextjs-gh-client-secret \
-  -e ROOT_URL="https://server.learnnextjs.com" \
+  -e ROOT_URL="https://okgrow-coursebook-server.now.sh" \
   -e MONGO_URL=@learnnextjs-mongo-url \
   -e ADMIN_TOKEN=$ADMIN_TOKEN
