@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const expressGraphql = require('express-graphql')
 const cors = require('cors')
@@ -9,8 +11,9 @@ const schema = require('./schema')
 
 const app = express()
 const port = process.env.PORT || 3003
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/coursebook'
-const sessionSecret = process.env.SESSION_SECRET || 'secret'
+// const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/coursebook'
+const mongoUrl = process.env.MONGO_URL;
+const sessionSecret = process.env.SESSION_SECRET;
 
 MongoClient.connect(mongoUrl)
   .then((db) => {
