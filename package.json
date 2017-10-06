@@ -8,9 +8,10 @@
     "lint": "standard",
     "test": "npm run lint",
     "dev": "sh scripts/devrun.sh",
+    "deploy": "sh scripts/deploy.sh",
     "start": "node server.js",
     "samples": "coursebook-publish http://localhost:3003 admin scripts/samples",
-    "react": "coursebook-publish http://localhost:3003 admin scripts/react"
+    "react": "coursebook-publish https://okgrow-coursebook-server.now.sh admin scripts/react"
   },
   "repository": {
     "type": "git",
